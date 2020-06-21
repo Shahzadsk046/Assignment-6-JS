@@ -327,5 +327,164 @@
 // document.write("Late payment surcharge: <b>" + lateCharge +"</b><br>");
 // document.write("Gross Amount Payable (after Due Date): <b>" + grossAmount +"</b><br>");
 
-// Assignment # 35 - 38
-// Task # 1
+// // Assignment # 35 - 38
+// // Task # 1
+// function date(){
+//     document.write(new Date());
+// }
+// date();
+
+// // Task # 2
+// function fullName(){
+//     firstName = prompt("Enter your First Name");
+//     lastName = prompt("Enter your Last Name");
+//     document.write("Hello " + firstName + " " + lastName);
+// }
+// fullName();
+
+// // Task # 3
+// function add(){
+//     var num1 = +prompt("Enter First Number");
+//     var num2 = +prompt("Enter Second Number to add");
+//     var sum = num1 + num2;
+//     document.write("Sum of " + num1 + " and " + num2 + " is equal to " + sum);
+// }
+// add();
+
+// // Task # 4
+// function  calculator(num1, oper, num2){
+//     if(oper === "+"){
+//         return num1 + num2;
+//     }
+//     else if(oper === "-"){
+//         return num1 - num2;
+//     }
+//     else if(oper === "*"){
+//         return num1 * num2;
+//     }
+//     else if(oper === "/"){
+//         return num1 / num2;
+//     }
+//     else{
+//         return "Incorrect Operator";
+//     }
+// }
+
+// result = calculator(5, "*", 6);
+// document.write(result);
+
+// // Task # 5
+// function square(num1){
+//     var squares = num1 * num1;
+//     document.write("Square of " + num1 + " = " + squares);
+// }
+// square(6);
+
+// // Task # 6
+// function factorial(n){
+//     if(n ===  0){
+//         return 1;
+//     }
+//     return n * factorial(n-1);
+// }
+
+// document.write(factorial(6));
+
+// // Task # 7
+// function count(){
+//     var a = prompt("Enter start number");
+//     var b = prompt("Enter end number");
+//     var result = b - a;
+//     document.write(result);
+// }
+// count();
+
+// // Task # 8
+// function calculateHypotenuse(){
+//     function calculateSquare(){
+//         var base = +prompt("Enter Base of Right Angle");
+//         var perpendicular = +prompt("Enter Perpendicular of Right Angle");
+//         result = Math.sqrt(((base * base) + (perpendicular * perpendicular)));
+//         return result;
+//     }
+//     document.write(calculateSquare());
+// }
+
+// calculateHypotenuse();
+
+// // Task # 9
+// function rectangle(){
+//     var width = +prompt("Enter width to find area of rectangle");
+//     var height = +prompt("Enter height to find area of rectangle");
+//     var area = width * height;
+//     document.write("Area of Rectangle is: " + area);
+// }
+
+// rectangle();
+
+// // Task # 10
+// function palindrome(str){
+//     var check = "";
+//     for(var i = str.length - 1; i >= 0; i--){
+//         check += str[i];
+//     }
+//     if(check === str){
+//         document.write(str + " is Palindrome Word");
+//     }
+//     else{
+//         document.write("This is not a Palindrome Word.")
+//     }
+// }
+// palindrome("madam");
+
+// // Task # 11
+// function titleCase(str){
+//     str = str.split(" ");
+//     for(var i = 0, x = str.length; i < x; i++){
+//         str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+//     }
+//     document.write(str.join(" "));
+// }
+
+// titleCase("The quick brown fox");
+
+// // Task # 12
+// function longest(str){
+//     var arr = str.match(/\w[a-z]{0,}/gi);
+//     var result = arr[0];
+//     for(var x = 1; x < arr.length; x++){
+//         if(result.length < arr[x].length)
+//         {
+//             result = arr[x];
+//         }
+//     }
+//     document.write(result);
+// }
+// longest("Web Development Tutorial");
+
+// // Task # 13
+// function count_Char(str, letter){
+//     var lcount = 0;
+//     for(var i = 0; i < str.length; i++){
+//         if(str.charAt(i) == letter){
+//             lcount += 1;
+//         }
+//     }
+//     return lcount;
+// }
+// document.write(count_Char("JSResourceS.com", "o"));
+
+// Task # 14
+function circle(radius){
+    this.radius = radius;
+    this.area = function(){
+        return Math.PI * this.radius * this.radius;
+    };
+    this.perimeter = function(){
+        return 2*Math.PI*this.radius;
+    };
+}
+
+var c = new circle(3);
+document.write("Area = " + c.area().toFixed(2));
+document.write("<br>Perimeter = " + c.perimeter().toFixed(2));
